@@ -4,19 +4,19 @@ pipeline {
     stage(build) {
       steps {
         echo 'Build docker image'
-        docker ps
+        sh 'docker ps'
       }
     }
     stage(test) {
       steps {
         echo 'Test docker image'
-        docker ps
+        sh 'docker ps'
       }      
     }
     stage(deploy) {
       steps {
         echo 'Publish docker image to AWS ECR'
-        docker ps
+        sh 'docker ps'
       }
     }
   }
