@@ -1,24 +1,23 @@
 pipeline {
-    agent any
-    stages {
-        stage('build') {
-            steps {
-                echo 'Building image'
-                docker ps
-            }
-        }
-        stage('test') {
-            steps {
-                echo 'Test image'
-                docker ps
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'Deploy image to ecr'
-                docker ps
-            }
-        }
-
+  agent any
+  stages {
+    stage(build) {
+      steps {
+        echo 'Build docker image'
+        docker ps
+      }
     }
+    stage(test) {
+      steps {
+        echo 'Test docker image'
+        docker ps
+      }      
+    }
+    stage(deploy) {
+      steps {
+        echo 'Publish docker image to AWS ECR'
+        docker ps
+      }
+    }
+  }
 }
