@@ -4,7 +4,7 @@ pipeline {
     stage(build) {
       steps {
         echo 'Build docker image'
-        sh 'docker ps'
+        sh 'docker build -t learn-docker/hello-docker:1.0.0 .'
       }
     }
     stage(test) {
@@ -17,7 +17,7 @@ pipeline {
     stage(deploy) {
       steps {
         echo 'Publish docker image to AWS ECR'
-        sh 'docker ps'
+        sh 'docker images'
       }
     }
   }
