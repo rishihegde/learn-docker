@@ -13,8 +13,8 @@ pipeline {
     stage(test) {
       steps {
         echo 'Test docker image'
-        #sh 'chmod +x test-build.sh'
-        #sh './test-build.sh'
+        //sh 'chmod +x test-build.sh'
+        //sh './test-build.sh'
       }      
     }
     stage(deploy) {
