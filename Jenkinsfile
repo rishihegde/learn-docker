@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Build docker image'
         sh '''
-          docker build 463028695216.dkr.ecr.us-east-1.amazonaws.com/learn-docker:${JOB_BASE_NAME}-1.0.0 
+          docker build 463028695216.dkr.ecr.us-east-1.amazonaws.com/learn-docker:hello-docker-1.0.0 . 
         '''
       }
     }
