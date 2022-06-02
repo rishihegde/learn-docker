@@ -1,5 +1,9 @@
+#!/bin/bash
+set -o errexit
 op=$(docker run --rm hello-docker)
-if [[ "$op" == "Hello world" ]]
+if [[ "$op" == "Hello worlds" ]]
 then
-	exit 1
+	echo 'Output expected'
+else
+	testfailed
 fi
