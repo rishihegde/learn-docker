@@ -4,4 +4,5 @@ WORKDIR /app
 
 COPY . .
 
-CMD ["python", "./hello-docker.py"]
+ENTRYPOINT ["python"]
+CMD ["./hello-docker.py"]
